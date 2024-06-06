@@ -1,95 +1,98 @@
 /******************
  * YOUR CODE HERE *
  ******************/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+const addAll = function(arr){
+  let total = 0
+  for(let num of arr){
+    //total = total + num
+    total += num
+  }
+  //return sum
+  return total
+}
+
+const countSpaces = function(str){
+  let space = 0
+  for(let char of str){
+    if(char === " "){
+      space = space + 1
+    }
+  }
+  return space
+}
+
+
+const countTrues = function(arr){
+  let trues = 0
+  for(let boolean of arr){
+    if(boolean === true){
+      trues = trues +1
+    }
+  }
+  return trues
+}
+
+const makeFriendly = function(str1) {
+  let str = ""
+  for(let char of str1){
+    if(char !== "."){
+      str = str + char
+    }else {
+      str = str + "!"
+  }  
+  }
+  return str
+  }
+
+const cubeAll = function(arr){
+let cubed = []
+for(let num of arr){
+  cubed.push(num ** 3)
+}
+return cubed
+}
+
+const addNoises = function(arr){
+let withNoises = []
+for(let name of arr){
+  if(name === "Fido" || name === "Rolph" || name === "Maisie"){
+    withNoises.push(name + ' says "Woof!"')
+  }else if(name === "Garfield"||name === "Heathcliff"){
+    withNoises.push(name + ' says "Meow!"')
+  }else if((name === "Barnie"||name === "Sharp Tooth")){
+    withNoises.push(name + ' says "ROWR."')
+  }
+}
+return withNoises
+}
+
+const womenOnly = function(arr){
+  let female = []
+  for(let name of arr){
+    if(name[name.length -1] === "F"){
+      female.push(name)
+    }
+
+  }
+  return female
+}
+// const integersOnly = function(input){
+  // let integers = []
+  // for(let i = 0; i >= Number.isInteger(input); i++){
+    
+  // }
+  
+// }
+const integersOnly = function(arr){
+  let integers = []
+  for(let num of arr){
+    if(num % 1 === 0){
+  
+     integers.push(num)
+    }
+  }
+  return integers
+} 
 
 
 /*********************************
@@ -364,279 +367,4 @@ describe('integersOnly', () => {
     assert.deepStrictEqual(result, [4, 6, 9.0, 11]); // 9.0 is considered an integer
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
